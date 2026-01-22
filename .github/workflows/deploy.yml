@@ -4,7 +4,6 @@ on:
   push:
     branches: [main]
 
-# Add permissions for GitHub token
 permissions:
   contents: read
   pages: write
@@ -33,10 +32,9 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: "./dist"
+          path: ./dist
 
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
