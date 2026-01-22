@@ -17,7 +17,7 @@ export function BillCard({
 }: BillCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const y = useMotionValue(0);
-  const [state, setState] = useState<"collapsed" | "expanded">("collapsed");
+  const [, setState] = useState<"collapsed" | "expanded">("collapsed");
 
   const getHeight = () =>
     containerRef.current?.clientHeight || 0;
